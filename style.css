@@ -22,7 +22,7 @@ header {
   height: 50px;
 }
 header img {
-  height: 20px;
+  height: 40px;
 }
 header ul {
   display: grid;
@@ -47,12 +47,24 @@ nav {
   padding: 20px;
 }
 nav img {
-  height: 50px;
+  height: 100px;
+  margin: 30px;
 }
 nav ul {
   display: grid;
   grid-template-areas: "auto" "auto" "auto" "auto";
   align-content: start;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 5px;
+  padding: 5px 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+nav ul li a {
+  text-decoration: none;
 }
 /* main */
 main {
@@ -93,6 +105,8 @@ main {
   align-content: space-evenly;
 }
 #content .container .item {
+  display: grid;
+  grid-template-areas: "auto" "auto" "auto";
   margin: 30px;
   padding: 10px;
   border: 2px solid black;
@@ -102,10 +116,10 @@ main {
 }
 #content .container .item img {
   width: 200px;
+  margin: 10px auto;
 }
 #content .container .item h3,
-#content
-.container .item p {
+#content .container .item p {
   text-align: center;
 }
 /* our clients */
@@ -138,29 +152,51 @@ main {
 #contact .heading {
   margin: 10px;
 }
+#contact .heading h2 {
+  text-align: center;
+}
 #contact form {
   display: grid;
   grid-template-areas: "auto" "auto" "auto" "auto" "auto";
   justify-content: center;
 }
 #contact form .form-item {
+  width: 400px;
   display: grid;
   grid-template-areas: "auto auto";
   justify-content: space-between;
-}
-.radios {
-  display: grid;
-  grid-template-areas: "auto auto";
+  margin: 3px;
 }
 input,
 textarea {
   width: 300px;
 }
-#gender {
+.radios {
+  margin-right: 146px;
+  display: grid;
+  grid-template-areas: "auto auto";
+}
+.radios input {
   width: auto;
+  margin-right: 20px;
+}
+#message {
+  height: 100px;
+}
+.buttons input {
+  width: 100px;
+  background-color: rgb(41, 128, 0);
+  border: 2px solid green;
+  padding: 15px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
 }
 /* footer */
 footer {
+  height: 20px;
+  background-color: black;
+  color: white;
   display: grid;
   grid-template-areas: "auto auto";
   border: 2px solid yellow;
@@ -169,7 +205,9 @@ footer {
 }
 footer p {
   text-align: center;
+  margin: 0 20px;
 }
 footer img {
   height: 20px;
+  margin: 0 20px;
 }
