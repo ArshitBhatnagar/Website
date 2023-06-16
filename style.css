@@ -12,7 +12,6 @@ body {
 }
 /* header */
 header {
-  border: 2px solid blue;
   display: grid;
   grid-area: header;
   grid-template-columns: repeat(2, auto);
@@ -20,7 +19,17 @@ header {
   align-items: center;
   grid-gap: 10px 30px;
   height: 50px;
+}
+header::before {
+  content: "";
   background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  opacity: 0.5;
+  z-index: -1;
 }
 header img {
   height: 40px;
@@ -28,13 +37,26 @@ header img {
 header ul {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 10px 30px;
+  gap: 0 30px;
 }
 header ul li {
   list-style: none;
 }
 header ul li a {
   text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+header ul li a:hover {
+  background-color: lightgray;
+  color: black;
+  border: 2px solid darkgray;
+}
+header ul li a:active {
+  background-color: white;
+  color: darkgray;
+  border: 1px solid gray;
 }
 /* navbar */
 nav {
@@ -44,9 +66,16 @@ nav {
   grid-template-rows: repeat(2, auto);
   align-content: start;
   justify-content: center;
+}
+nav::before {
+  content: "";
+  background-color: blue;
+  position: absolute;
+  left: 0px;
   height: 100%;
-  padding: 20px;
-  background-color: darkblue;
+  width: 100%;
+  opacity: 0.8;
+  z-index: -1;
 }
 nav img {
   height: 100px;
@@ -61,12 +90,20 @@ nav ul {
 }
 nav ul li {
   list-style: none;
-  padding: 5px 50px;
   border: 2px solid black;
   border-radius: 10px;
+  padding: 5px 50px;
+  background-color: blue;
 }
 nav ul li a {
   text-decoration: none;
+  color: lightblue;
+}
+nav ul li a:hover {
+  color: white;
+}
+nav ul li a:active {
+  color: darkblue;
 }
 /* main */
 main {
