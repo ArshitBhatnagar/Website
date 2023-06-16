@@ -15,18 +15,19 @@ header {
   border: 2px solid blue;
   display: grid;
   grid-area: header;
-  grid-template-areas: "auto auto";
+  grid-template-columns: repeat(2, auto);
   justify-content: center;
   align-items: center;
-  gap: 10px 30px;
+  grid-gap: 10px 30px;
   height: 50px;
+  background-color: black;
 }
 header img {
   height: 40px;
 }
 header ul {
   display: grid;
-  grid-template-areas: "auto auto auto auto";
+  grid-template-columns: repeat(4, auto);
   gap: 10px 30px;
 }
 header ul li {
@@ -40,11 +41,12 @@ nav {
   border: 2px solid red;
   display: grid;
   grid-area: nav;
-  grid-template-areas: "auto" "auto";
+  grid-template-rows: repeat(2, auto);
   align-content: start;
   justify-content: center;
   height: 100%;
   padding: 20px;
+  background-color: darkblue;
 }
 nav img {
   height: 100px;
@@ -52,13 +54,13 @@ nav img {
 }
 nav ul {
   display: grid;
-  grid-template-areas: "auto" "auto" "auto" "auto";
+  grid-template-rows: repeat(4, auto);
   align-content: start;
   justify-content: center;
+  grid-gap: 10px;
 }
 nav ul li {
   list-style: none;
-  margin: 5px;
   padding: 5px 50px;
   border: 2px solid black;
   border-radius: 10px;
@@ -74,15 +76,17 @@ main {
 /* home */
 #home {
   display: grid;
-  grid-template-areas: "auto auto";
+  grid-template-columns: repeat(2, auto);
   padding: 40px;
+  background: url(https://images5.alphacoders.com/419/419573.jpg) no-repeat
+    center center/cover;
 }
 #home img {
   height: 300px;
 }
 #home .heading {
   display: grid;
-  grid-template-areas: "auto" "auto" "auto";
+  grid-template-rows: repeat(3, auto);
   align-content: center;
 }
 .heading h1,
@@ -92,22 +96,25 @@ main {
 /* content */
 #content {
   display: grid;
-  grid-template-areas: "auto" "auto";
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
+  padding: 20px;
+  grid-gap: 20px;
+  background: url(https://wallpapercave.com/wp/wp2036901.jpg) no-repeat center
+    center/cover;
 }
-#content .heading {
-  margin: 20px;
+#content .heading h2 {
+  text-align: center;
 }
 #content .container {
   display: grid;
-  grid-template-areas: "auto auto auto";
   justify-content: space-evenly;
   align-content: space-evenly;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, auto);
 }
 #content .container .item {
   display: grid;
-  grid-template-areas: "auto" "auto" "auto";
-  margin: 30px;
   padding: 10px;
   border: 2px solid black;
   border-radius: 20px;
@@ -118,54 +125,58 @@ main {
   width: 200px;
   margin: 10px auto;
 }
-#content .container .item h3,
-#content .container .item p {
+.item h3,
+.item p {
   text-align: center;
 }
 /* our clients */
 #clients {
   display: grid;
-  grid-template-areas: "auto" "auto";
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
   align-content: space-evenly;
+  padding: 20px;
+  grid-gap: 20px;
+  background: url(https://wallpapercave.com/wp/wp6680305.jpg) no-repeat center
+    center/cover;
 }
 #clients .heading {
   display: grid;
   justify-content: center;
-  margin: 20px;
 }
 #clients .clients {
   display: grid;
-  grid-template-areas: "auto auto auto auto";
+  grid-template-columns: repeat(4, auto);
   justify-content: space-evenly;
+  grid-gap: 80px;
 }
 #clients .clients img {
   width: 100px;
-  margin: 30px;
 }
 /* contact us */
 #contact {
   display: grid;
-  grid-template-areas: "auto" "auto";
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
-}
-#contact .heading {
-  margin: 10px;
+  padding: 20px;
+  grid-gap: 10px;
+  background: url(https://th.bing.com/th/id/OIP.YwWTuKuLZISS1UR3QtOZnwHaC2?pid=ImgDet&rs=1)
+    no-repeat center center/cover;
 }
 #contact .heading h2 {
   text-align: center;
 }
 #contact form {
   display: grid;
-  grid-template-areas: "auto" "auto" "auto" "auto" "auto";
+  grid-template-rows: repeat(5, auto);
   justify-content: center;
+  grid-gap: 5px;
 }
 #contact form .form-item {
   width: 400px;
   display: grid;
-  grid-template-areas: "auto auto";
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
-  margin: 3px;
 }
 input,
 textarea {
@@ -174,7 +185,7 @@ textarea {
 .radios {
   margin-right: 146px;
   display: grid;
-  grid-template-areas: "auto auto";
+  grid-template-columns: repeat(2, auto);
 }
 .radios input {
   width: auto;
@@ -191,6 +202,7 @@ textarea {
   border-radius: 20px;
   font-size: 16px;
   color: white;
+  margin: 10px;
 }
 /* footer */
 footer {
@@ -198,7 +210,7 @@ footer {
   background-color: black;
   color: white;
   display: grid;
-  grid-template-areas: "auto auto";
+  grid-template-columns: repeat(2, auto);
   border: 2px solid yellow;
   grid-area: footer;
   justify-content: space-between;
