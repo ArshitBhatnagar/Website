@@ -25,21 +25,23 @@ p, a {
 /* header */
 header {
   display: grid;
+  position: sticky;
+  top: 0;
   grid-area: header;
   grid-template-columns: repeat(2, auto);
   justify-content: center;
   align-items: center;
   grid-gap: 10px 30px;
   height: 50px;
+  z-index: 1;
 }
 header::before {
   content: "";
   background-color: rgb(24, 24, 114);
   position: absolute;
-  left: 0px;
-  height: 50px;
+  height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1;
 }
 header img {
@@ -55,7 +57,7 @@ header ul li {
 }
 header ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 5px;
   border-radius: 10px;
 }
@@ -66,12 +68,13 @@ header ul li a:hover {
 }
 header ul li a:active {
   background-color: white;
-  color: darkgray;
+  color: rgb(39, 34, 34);
   border: 1px solid gray;
 }
 /* navbar */
 nav {
   display: grid;
+  position: relative;
   grid-area: nav;
   grid-template-rows: repeat(2, auto);
   align-content: start;
@@ -81,9 +84,8 @@ nav::before {
   content: "";
   background-color: rgb(21, 21, 59);
   position: absolute;
-  left: 0px;
-  height: 2404px;
-  width: 202px;
+  height: 100%;
+  width: 100%;
   z-index: -1;
 }
 nav img {
@@ -123,15 +125,14 @@ main {
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding: 40px;
+  position: relative;
 }
 #home::before {
   content: "";
   background: url(https://images5.alphacoders.com/419/419573.jpg) no-repeat
     center center/cover;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 430px;
+  height: 100%;
   width: 100%;
   opacity: 0.8;
   z-index: -1;
@@ -155,17 +156,16 @@ main {
   justify-content: center;
   padding: 20px;
   grid-gap: 20px;
+  position: relative;
 }
 #content::before {
   content: "";
   background: url(https://wallpapercave.com/wp/wp2036901.jpg) no-repeat center
     center/cover;
   position: absolute;
-  top: 431px;
-  left: 0px;
-  height: 1394px;
+  height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1;
 }
 #content .heading h2 {
@@ -203,15 +203,14 @@ main {
   align-content: space-evenly;
   padding: 20px;
   grid-gap: 20px;
+  position: relative;
 }
 #clients::before {
   content: "";
   background: url(https://wallpapercave.com/wp/wp6680305.jpg) no-repeat center
     center/cover;
   position: absolute;
-  top: 1826px;
-  left: 0px;
-  height: 233px;
+  height: 100%;
   width: 100%;
   opacity: 0.5;
   z-index: -1;
@@ -236,15 +235,14 @@ main {
   justify-content: center;
   padding: 20px;
   grid-gap: 10px;
+  position: relative;
 }
 #contact::before {
   content: "";
   background: url(https://th.bing.com/th/id/OIP.YwWTuKuLZISS1UR3QtOZnwHaC2?pid=ImgDet&rs=1)
     no-repeat center center/cover;
   position: absolute;
-  top: 2060px;
-  left: 0px;
-  height: 392px;
+  height: 100%;
   width: 100%;
   opacity: 0.5;
   z-index: -1;
@@ -292,20 +290,18 @@ textarea {
 }
 /* footer */
 footer {
-  height: 20px;
   color: white;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-area: footer;
   justify-content: space-between;
+  position: relative;
 }
 footer::before {
   content: "";
   background-color: black;
   position: absolute;
-  top: 2453px;
-  left: 0px;
-  height: 23px;
+  height: 100%;
   width: 100%;
   opacity: 0.9;
   z-index: -1;
